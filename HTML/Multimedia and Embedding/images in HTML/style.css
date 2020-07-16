@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    background: transparent;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2::before {
+    color: greenyellow;
+    content: "\00A7";
+    visibility: hidden;
+}
+
+h2:hover::before {
+    visibility: visible;
+}
+
+h2::after {
+    content: ":";
+    margin-left: 5px;
+}
+
+.container figure {
+    width: 300px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container figure img {
+    width: 100%;
+    display: block;
+}
+
+.container figure figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 16px;
+    color: rgb(112, 110, 110);
+}
+
+.image {
+    background-image: url("images/firefox-icon.png");
+    background-position: center;
+    background-size: auto;
+    background-origin: border-box;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background-image: url("images/firefox-icon.png");
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2::after {
+    content: ":";
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+h2::before {
+    content: '\00A7';
+    visibility: hidden;
+}
+
+h2:hover::before {
+    content: "\00A7";
+    visibility: visible;
+}
