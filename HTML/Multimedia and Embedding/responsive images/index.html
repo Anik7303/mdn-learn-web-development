@@ -1,0 +1,63 @@
+<!-- all images obtained from google -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Images</title>
+        <style>
+            main {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            img {
+                display: block;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <picture>
+                <source
+                    media="(max-width: 600px)"
+                    srcset="images/honister-pass-320w.jpg"
+                    type="image/jpg"
+                />
+                <source
+                    media="(max-width: 800px)"
+                    srcset="images/honister-pass-480w.jpg"
+                    type="image/jpg"
+                />
+                <img
+                    src="images/honister-pass-640w.jpg"
+                    alt="Honister Pass in the Lake District"
+                />
+            </picture>
+            <img
+                srcset="
+                    images/honister-pass-320w.jpg 320w,
+                    images/honister-pass-480w.jpg 480w,
+                    images/honister-pass-640w.jpg 640w
+                "
+                sizes="(max-width: 600px) 320px, (max-width: 800px) 480px, 640px"
+                src="images/honister-pass.jpg"
+                alt="Honister Pass in the Lake District"
+            />
+            <!-- <img
+                srcset="
+                    images/honister-pass-320w.jpg  320w,
+                    images/honister-pass-480w.jpg  480w,
+                    images/honister-pass-640w.jpg  640w,
+                    images/honister-pass.jpg      1920w
+                "
+                sizes="(max-width: 600px) 320px, (max-width: 800px) 480px, (max-width: 1000px) 640px, 1920px"
+                src="images/honister-pass.jpg"
+                alt="Honister Pass in the Lake District"
+            /> -->
+        </main>
+    </body>
+</html>

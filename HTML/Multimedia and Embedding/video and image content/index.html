@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Video and Audio Content</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <!-- <video width="" height="" controls muted loop autoplay preload="none|auto|metadata" poster="poster.png"> <source> <track> </video> -->
+            <!-- <audio controls muted loop autoplay preload="none|auto|metadata"> <source> <track> </audio> -->
+            <!-- <track kind="subtitles|captions" src="" srclang="" > -->
+            <video
+                class="video-player"
+                controls
+                loop
+                preload="auto"
+                poster="/posters/005-bfs-implementation.png"
+            >
+                <source
+                    type="video/mp4"
+                    src="/videos/005-bfs-implementation.mp4"
+                />
+                <track
+                    kind="subtitles"
+                    src="/subtitles/005-bfs-implementation.vtt"
+                    srclang="en"
+                />
+                <p>
+                    Your browser doesn't support HTML5 video. Here is a
+                    <a href="/videos/video.mp4">link to the video</a> instead.
+                </p>
+            </video>
+        </main>
+    </body>
+</html>
