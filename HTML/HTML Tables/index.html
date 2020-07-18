@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML Tables</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            main {
+                width: 70%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            table {
+                width: 100%;
+                border: 2px solid black;
+                margin: 0;
+                padding: 0;
+                border-collapse: collapse;
+            }
+
+            td,
+            th {
+                margin: 0;
+                padding: 5px;
+                border: 1px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <table>
+                <caption>
+                    How i chose to spend my money
+                </caption>
+                <!-- <colgroup> -->
+                <!-- <col
+                        style="background-color: yellow; border: 4px solid red;"
+                        span="5"
+                    /> -->
+                <!-- <col style="background-color: yellow;" />
+                    <col style="background-color: yellow;" />
+                    <col style="background-color: yellow;" />
+                    <col style="background-color: yellow;" /> -->
+                <!-- </colgroup> -->
+                <thead>
+                    <tr>
+                        <th scope="col">Purchase</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Evaluation</th>
+                        <th scope="col">Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Haircut</th>
+                        <td>Hairdresser</td>
+                        <td>12/09</td>
+                        <td>Great idea</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <th>Lasagna</th>
+                        <td>Restaurant</td>
+                        <td>12/09</td>
+                        <td>Regrets</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <th>Shoes</th>
+                        <td>Shoeshop</td>
+                        <td>13/09</td>
+                        <td>Big regrets</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <th>Toothpaste</th>
+                        <td>Supermarket</td>
+                        <td>13/09</td>
+                        <td>Good</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">SUM</td>
+                        <td>118</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <caption>
+                    How i chose to spend my money
+                </caption>
+                <thead>
+                    <tr>
+                        <th id="purchase">Purchase</th>
+                        <th id="location">Location</th>
+                        <th id="date">Date</th>
+                        <th id="evaluation">Evaluation</th>
+                        <th id="cost">Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="haircut">Haircut</th>
+                        <td headers="location haircut">Hairdresser</td>
+                        <td headers="date haircut">12/09</td>
+                        <td headers="evaluation haircut">Great idea</td>
+                        <td headers="cost haircut">30</td>
+                    </tr>
+                    <tr>
+                        <th id="lasagna">Lasagna</th>
+                        <td headers="location lasagna">Restaurant</td>
+                        <td headers="date lasagna">12/09</td>
+                        <td headers="evaluation lasagna">Regrets</td>
+                        <td headers="cost lasagna">18</td>
+                    </tr>
+                    <tr>
+                        <th id="shoes">Shoes</th>
+                        <td headers="location shoes">Shoeshop</td>
+                        <td headers="date shoes">13/09</td>
+                        <td headers="evaluation shoes">Big regrets</td>
+                        <td headers="cost shoes">65</td>
+                    </tr>
+                    <tr>
+                        <th id="toothpaste">Toothpaste</th>
+                        <td headers="location toothpaste">Supermarket</td>
+                        <td headers="date toothpaste">13/09</td>
+                        <td headers="evaluation toothpaste">Good</td>
+                        <td headers="cost toothpaste">5</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td id="sum" colspan="4">SUM</td>
+                        <td headers="id">118</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+    </body>
+</html>
